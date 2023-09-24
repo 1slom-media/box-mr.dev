@@ -157,7 +157,29 @@
     "8": "Reset",
     "9": "Calculate"
   },
-  "Work":{
+
+  "Vacansy": {
+    "0": "Fill out your resume",
+    "1": "Fill out the form",
+    "2": "Send your resume and we will definitely contact you",
+    "3": "Full name",
+    "4": "Year of birth",
+    "5": "Place of residence",
+    "6": "Marital status",
+    "7": "Phone",
+    "8": "Education",
+    "9": "Work experience (indicate the last three)",
+    "10": "1st place",
+    "11": "2nd place",
+    "12": "3rd place",
+    "13": "Knowledge of Uzb / Russian languages",
+    "14": "Question/Comment",
+    "15": "Send"
+  },
+  "BlogMore": {
+    "0": "Publication date:"
+  },
+  "Work": {
     "0":"6 reasons to work with us",
     "1":"Our advantages",
     "2":"Dozens of fictional and embodied designs, millions of manufactured boxes - our experience knows no bounds. We highly value every client and always work to ensure their satisfaction. We don't stop there. We have modern equipment and high quality raw materials in our arsenal. This allows us to guarantee dynamism and flexibility in our work. We strive for optimal value for money. In addition to boxes, we also specialize in stretch bags, foil and shrink film. Our portfolio includes a wide range of packaging products ready to meet the varied needs of clients.",

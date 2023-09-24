@@ -22,6 +22,7 @@ export const CatalogProducts = () => {
   const dispatch = useDispatch()
   const categoryGetState = useSelector((state) => state.category.categoryGet?.data);
 
+
   // const productGetState = useSelector((state) => state.product.productGet?.data);
   // const [productS, setProductS] = useState(productGetState);
   useEffect(() => {
