@@ -7,7 +7,7 @@ import { MdMail } from "react-icons/md";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { CgClose } from "react-icons/cg";
 import { useTranslation } from "react-i18next";
-import LogoImg from "../../../assets/home/logo.svg";
+import LogoImg from "../../../assets/home/logo.png";
 import LanguageHeader from "./header-language";
 import { BigContainer } from "../../../style-app";
 import { Button } from "../../common/button-common/index";
@@ -39,7 +39,7 @@ const ContactHeader = () => {
           <Row className={styles.header_row}>
             <Col className={styles.header_logo} lg={2} md={2} sx={6} sm={6}>
               <Link to="/">
-                <img src={LogoImg} alt="company logo" />
+                <img src={LogoImg} width={100} height={100} alt="company logo" />
               </Link>
             </Col>
             <Col className={click ? ` ${styles.header_list} ${styles.header_list_active}` : `${styles.header_list}`}>

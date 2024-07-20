@@ -2,7 +2,7 @@ import { Col, Row } from "react-grid-system";
 import { Link } from "react-router-dom";
 import { BigContainer } from "../../style-app";
 import { useTranslation } from "react-i18next";
-import LogoFooter from "../../assets/home/logo.svg";
+import LogoFooter from "../../assets/home/logo.png";
 import styles from "./footer.module.css";
 import { CategoryGet } from "../../redux/category/index";
 import { useSelector, useDispatch } from "react-redux";
@@ -42,15 +42,15 @@ export const Footer = () => {
               </Link>
             </Col>
             <Col lg={3} md={3} sx={12} sm={12} className={styles.footer_list}>
-              <Link onClick={handleTop} to="/catalog">
-                {t("Footer.0")}
-              </Link>
+              <h2>
+                {t("Footer.0")} :
+              </h2>
               {categoryGetState.map((elem) => (
                 <Link
                   onClick={handleTop}
                   key={elem.id}
                   id={elem.id}
-                  to="/catalog"
+                  to={`/catalog/${elem.id}`}
                 >
                   {LangVal() === "ru"
                     ? elem.title_ru

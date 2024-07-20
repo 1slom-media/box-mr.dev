@@ -151,7 +151,12 @@
     "6": "Kengligi",
     "7": "Qalinligi",
     "8": "Tozalash",
-    "9": "Hisoblash"
+    "9": "Hisoblash",
+    "10":"Qutilarning narxini hisoblang",
+    "11":"Eni",
+    "12":"Uzunlik",
+    "13":"Boyi",
+    "14":"Summa"
   },
 
   "Vacansy": {
@@ -175,18 +180,6 @@
 
   "BlogMore": {
     "0": "Nashr qilingan sana:"
-  },
-  "Modal":{
-    "0":"Iltimos, vazn yoki uzunlikni tanlang",
-    "1":"iltimos, anketani to'liq to'ldiring",
-    "2":"Filmlarni hisoblash",
-    "3":"Film uzunligini hisoblash uchun ma'lumotlarni kiriting",
-    "4":"Og'irlik",
-    "5":"Uzunlik",
-    "6":"Kengligi",
-    "7":"Qalinligi",
-    "8":"Tozalash",
-    "9":"Hisoblash"
   },
   "Work":{
     "0":"Biz bilan ishlash uchun 6 ta sabab",

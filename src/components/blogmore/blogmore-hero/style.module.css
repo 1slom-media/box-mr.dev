@@ -1,5 +1,5 @@
 .bg_blog {
-  background-image: url(../../../assets/news/bg-breadcrumb.jpg);
+  background-image: url(../../../assets/news/bg-breadcrumb.jpg) !important;
   background-position: center 200% !important;
   /* color: #000 !important; */
 }

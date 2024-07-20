@@ -3,7 +3,7 @@
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
+    /* height: 100vh; */
     /* padding-bottom: 20px; */
     /* z-index: 100 !important; */
 }
@@ -24,7 +24,7 @@
 }
 
 .home_hero_col>h2 {
-    padding-top: 40vh;
+    padding-top: 150px;
     max-width: 100%;
     margin-top: 0;
     font-style: normal;
@@ -124,7 +124,7 @@
 
 @media only screen and (max-width: 996px) {
     .home_hero_col>h2 {
-        padding-top: 30vh;
+        padding-top: 120px;
         font-size: 45px;
         line-height: 48px;
     }
@@ -143,9 +143,9 @@
 }
 
 @media only screen and (max-width: 900px){
-    .hero_section {
+    /* .hero_section {
         height: 120vh;
-    }
+    } */
 
     .content{
         margin: 30px auto;

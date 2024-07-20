@@ -155,7 +155,12 @@
     "6": "Width",
     "7": "Thickness",
     "8": "Reset",
-    "9": "Calculate"
+    "9": "Calculate",
+    "10":"Calculate the cost of boxes",
+    "11":"Width",
+    "12":"Lenght",
+    "13":"Height",
+    "14":"Amount"
   },
 
   "Vacansy": {

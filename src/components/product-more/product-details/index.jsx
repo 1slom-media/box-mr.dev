@@ -42,6 +42,9 @@ const ProductDetails = () => {
   const widthRef = useRef();
   const thicknessRef = useRef();
   const univRef = useRef();
+  const vidthRef = useRef();
+  const heightRef = useRef();
+  const lenghtRef = useRef();
 
   const HandleOpen = () => {
     setOpen(true);
@@ -79,6 +82,18 @@ const ProductDetails = () => {
       setError(t("Modal.0"));
     }
   };
+  const schetHandleBox = () => {
+    if (
+      !vidthRef.current.value ||
+      !lenghtRef.current.value ||
+      !heightRef.current.value
+    ) {
+      setError(t("Modal.1"));
+    }
+    setResult(
+      (((Number(vidthRef.current.value)+Number(lenghtRef.current.value))*2+70)*(Number(vidthRef.current.value)+Number(heightRef.current.value)+8))/1000000
+    );
+  };
   const resetHandle = () => {
     univRef.current.value = "";
     thicknessRef.current.value = "";
@@ -89,11 +104,21 @@ const ProductDetails = () => {
     }
   };
 
+  const resetHandleBox = () => {
+    vidthRef.current.value = "";
+    lenghtRef.current.value = "";
+    heightRef.current.value = "";
+    setResult(0);
+    if (error) {
+      setError(null);
+    }
+  };
+
   const LangVal = () => {
     return window.localStorage.getItem("i18nextLng");
   };
+  // modal
   const [opened, setOpened] = useState(false);
-
   const handleOpen = () => {
     setOpened(true);
   };
@@ -101,8 +126,18 @@ const ProductDetails = () => {
   const handleClose = () => {
     setOpened(false);
   };
+  // karopka
+  const [opens, setOpens] = useState(false);
+  const handleOpens = () => {
+    setOpens(true);
+  };
+  const handleCloses = () => {
+    setOpens(false);
+  };
+
   return (
     <>
+      {/* modal plyonku */}
       <div
         className={
           open
@@ -168,7 +203,47 @@ const ProductDetails = () => {
           <Button onClick={resetHandle}>{t("Modal.8")}</Button>
         </div>
       </div>
-      <Modal open={opened} HandleClose={handleClose}/>
+      {/* Modal karopku */}
+      <div
+        className={
+          opens
+            ? `${styles.modal_curtain} ${styles.modal_curtain_active}`
+            : styles.modal_curtain
+        }
+      >
+        <div className={styles.modal}>
+          <button className={styles.close_btn} onClick={handleCloses}>
+            <GrClose className={styles.close_icon} />
+          </button>
+          <h3>{t("Modal.10")}</h3>
+          <form>
+            <label>
+              {t("Modal.11")} (мм) <br />
+              <input ref={vidthRef} type="text" required />
+            </label>
+            <label>
+              {t("Modal.12")} (мм) <br />
+              <input ref={lenghtRef} type="text" required />
+            </label>
+            <label>
+              {t("Modal.13")} (мм)
+              <br />
+              <input ref={heightRef} type="text" required />
+            </label>
+          </form>
+          <p>
+          {t("Modal.14")}
+            : {result*500} uzs
+          </p>
+          <div className={styles.error_text}>{error}</div>
+          <Button className={styles.schet_btn} onClick={schetHandleBox}>
+            {t("Modal.9")}
+          </Button>
+          <Button onClick={resetHandleBox}>{t("Modal.8")}</Button>
+        </div>
+      </div>
+      {/* Modal zakazat */}
+      <Modal open={opened} HandleClose={handleClose} />
       <div className={styles.product_detail_section}>
         <WrapperContainer>
           <div className={styles.product_details_row_wrapp}>
@@ -226,7 +301,7 @@ const ProductDetails = () => {
                     <div className={styles.hr}></div>
                     <div className={styles.hero_buttons}>
                       <Button onClick={handleOpen}>{t("ProductMore.5")}</Button>
-                      <Button onClick={HandleOpen}>{t("Modal.9")}</Button>
+                      {elem.type=="пакет"?<Button onClick={HandleOpen}>{t("Modal.9")}</Button>:<Button onClick={handleOpens}>{t("Modal.9")}</Button>}
                     </div>
                   </div>
                 </Col>

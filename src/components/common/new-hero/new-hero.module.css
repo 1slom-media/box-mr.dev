@@ -34,4 +34,11 @@
   margin-bottom: 40px;
 }
 
+@media (max-width: 550px) {
+  body .hero_section {
+    background-size: cover !important;
+    background-attachment: inherit;
+  }
+}
+
 

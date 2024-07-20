@@ -37,6 +37,13 @@
     gap: 30px;
 }
 
+.footer_list>h2{
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 18px;
+    letter-spacing: 2px;
+}
+
 .footer_list>a {
     text-decoration: none;
     font-weight: 500;
@@ -61,10 +68,10 @@
 }
 
 @media only screen and (max-width: 1000px) {
-    .footer_img {
+    /* .footer_img {
         width: 154px;
         height: 186px;
-    }
+    } */
 
     .footer_list>a {
         font-size: 16px;

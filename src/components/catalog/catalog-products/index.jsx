@@ -62,13 +62,31 @@ export const CatalogProducts = () => {
                         : `${product.title_ru.slice(0, 30)}...`
                     }
                     text={
-                      LangVal() == "ru"
-                        ? `${product.description_ru.slice(0,50)}...`
-                        : LangVal() == "uz"
-                          ? `${product.description_uz.slice(0,50)}...`
-                          : LangVal() == "en"
-                            ? `${product.description_en.slice(0,50)}...`
-                            : `${product.description_ru.slice(0,50)}...`
+                      LangVal() == "ru" ? (
+                        <div
+                          dangerouslySetInnerHTML={{
+                            __html: `${product.description_ru.slice(0,40)}...`,
+                          }}
+                        />
+                      ) : LangVal() == "uz" ? (
+                        <div
+                          dangerouslySetInnerHTML={{
+                            __html: `${product.description_uz.slice(0,70)}...`,
+                          }}
+                        />
+                      ) : LangVal() == "en" ? (
+                        <div
+                          dangerouslySetInnerHTML={{
+                            __html: `${product.description_en.slice(0,70)}...`,
+                          }}
+                        />
+                      ) : (
+                        <div
+                          dangerouslySetInnerHTML={{
+                            __html: `${product.description_ru.slice(0,70)}...`,
+                          }}
+                        />
+                      )
                     }
                     image={product.image}
                     id={product.id}

@@ -72,13 +72,43 @@ const NewsCard = () => {
                             : elem.title_ru}
                         </h4>
                         <p>
-                          {LangVal() == "ru"
-                            ? `${elem.description_ru.slice(0, 248)}...`
-                            : LangVal() == "uz"
-                            ? `${elem.description_uz.slice(0, 248)}...`
-                            : LangVal() == "en"
-                            ? `${elem.description_en.slice(0, 248)}...`
-                            : `${elem.description_ru.slice(0, 248)}...`}
+                          {LangVal() == "ru" ? (
+                            <div
+                              dangerouslySetInnerHTML={{
+                                __html: `${elem.description_ru.slice(
+                                  0,
+                                  248
+                                )}...`,
+                              }}
+                            ></div>
+                          ) : LangVal() == "uz" ? (
+                            <div
+                              dangerouslySetInnerHTML={{
+                                __html: `${elem.description_uz.slice(
+                                  0,
+                                  248
+                                )}...`,
+                              }}
+                            ></div>
+                          ) : LangVal() == "en" ? (
+                            <div
+                              dangerouslySetInnerHTML={{
+                                __html: `${elem.description_en.slice(
+                                  0,
+                                  248
+                                )}...`,
+                              }}
+                            ></div>
+                          ) : (
+                            <div
+                              dangerouslySetInnerHTML={{
+                                __html: `${elem.description_ru.slice(
+                                  0,
+                                  248
+                                )}...`,
+                              }}
+                            ></div>
+                          )}
                         </p>
                         <span>
                           <i class="bx bx-calendar"></i>

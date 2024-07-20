@@ -7,7 +7,7 @@ import { MdMail } from "react-icons/md";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { CgClose } from "react-icons/cg";
 import { useTranslation } from "react-i18next";
-import LogoImg from "../../assets/home/logo.svg";
+import LogoImg from "../../assets/home/logo.png";
 import LanguageHeader from "./header-language";
 import { DownOutlined } from "@ant-design/icons";
 import { Dropdown, Space } from "antd";
@@ -36,6 +36,12 @@ const Header = (props) => {
       setOpens(false);
     }
   };
+
+  const handleOut=()=>{
+    setClick(!click)
+    setOpens(false)
+  }
+
   const handleOpenChanges = (flag) => {
     setOpens(flag);
   };
@@ -87,7 +93,7 @@ const Header = (props) => {
           <Row className={styles.header_row}>
             <Col className={styles.header_logo} lg={2} md={2} sx={6} sm={4}>
               <Link to="/">
-                <img src={LogoImg} alt="company logo" />
+                <img src={LogoImg} width={100} height={100} alt="company logo" />
               </Link>
             </Col>
 
@@ -145,9 +151,9 @@ const Header = (props) => {
                 sx={4}
                 sm={4}
               >
-                <a href="tel:+998931304144">
+                <a href="tel:+998933911171">
                   <HiPhone className={styles.icon} />
-                  <span className={styles.span}>+(93) 130-41-44</span>
+                  <span className={styles.span}>(93) 391-11-71</span>
                 </a>
                 <a href="mailto:m.buriev@yodik.uz">
                   <MdMail className={styles.icon} />
@@ -190,7 +196,7 @@ const Header = (props) => {
                 <Dropdown
                   menu={{
                     items:categoryGetState.map(item=>(
-                      {label:<Link to="/catalog" key={item.id}>{
+                      {label:<Link onClick={handleOut} to={`/catalog/${item.id}`} key={item.id}>{
                         LangVal() == "ru"
                           ? item.title_ru
                           : LangVal() == "uz"
@@ -227,9 +233,9 @@ const Header = (props) => {
               sx={4}
               sm={4}
             >
-              <a href="tel:+998931304144">
+              <a href="tel:+998933911171">
                 <HiPhone className={styles.icon} />
-                <span className={styles.span}>+(93) 130-41-44</span>
+                <span className={styles.span}>(93) 391-11-71</span>
               </a>
               <a href="mailto:m.buriev@yodik.uz">
                 <MdMail className={styles.icon} />

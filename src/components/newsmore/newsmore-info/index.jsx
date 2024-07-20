@@ -65,16 +65,32 @@ const NewsMoreInfo = () => {
                       </div>
 
                       <p>
-                        {
-                          LangVal() == "ru"
-                            ? elem.description_ru
-                            : LangVal() == "uz"
-                              ? elem.description_uz
-                              : LangVal() == "en"
-                                ? elem.description_en
-                                : elem.description_ru
-                        }
-                      </p>
+                          {LangVal() == "ru" ? (
+                            <div
+                              dangerouslySetInnerHTML={{
+                                __html: `${elem.description_ru}`,
+                              }}
+                            ></div>
+                          ) : LangVal() == "uz" ? (
+                            <div
+                              dangerouslySetInnerHTML={{
+                                __html: `${elem.description_uz}`,
+                              }}
+                            ></div>
+                          ) : LangVal() == "en" ? (
+                            <div
+                              dangerouslySetInnerHTML={{
+                                __html: `${elem.description_en}`,
+                              }}
+                            ></div>
+                          ) : (
+                            <div
+                              dangerouslySetInnerHTML={{
+                                __html: `${elem.description_ru}`,
+                              }}
+                            ></div>
+                          )}
+                        </p>
                     </div>
                   ))
                 }

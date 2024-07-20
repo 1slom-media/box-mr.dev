@@ -179,6 +179,10 @@
 }
 
 @media only screen and (max-width: 500px){
+    .header_logo>a>img{
+        width: 80px;
+        height: 80px;
+    }
     .header_mobile_list{
         width: 60% !important;
     }

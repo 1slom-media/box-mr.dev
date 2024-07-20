@@ -35,8 +35,9 @@ export const Form = () => {
                 <HiPhone size={25} color="#ffffff" />
               </li>
               <li className={styles.form_item_tel}>
-                <a href="+998933911171">+998 93 (391) - 11 - 71</a>
-                <a href="+998931304144">+998 93 (130) -41 - 44</a>
+                <a href="tel:+998901122828">+998 90 (112) -28 - 28</a>
+                <a href="tel:+998933911171">+998 93 (391) -11 - 71</a>
+                <a href="tel:+998903475499">+998 90 (347) -54 - 99</a>
               </li>
             </ul>
             {/* mail list */}

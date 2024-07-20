@@ -139,13 +139,31 @@ const ProductFactory = () => {
                         : `${product.title_ru.slice(0, 30)}...`
                     }
                     text={
-                      LangVal() == "ru"
-                        ? `${product.description_ru.slice(0, 30)}...`
-                        : LangVal() == "uz"
-                        ? `${product.description_uz.slice(0, 30)}...`
-                        : LangVal() == "en"
-                        ? `${product.description_en.slice(0, 30)}...`
-                        : `${product.description_ru.slice(0, 30)}...`
+                      LangVal() == "ru" ? (
+                        <div
+                          dangerouslySetInnerHTML={{
+                            __html: `${product.description_ru.slice(0, 30)}...`,
+                          }}
+                        />
+                      ) : LangVal() == "uz" ? (
+                        <div
+                          dangerouslySetInnerHTML={{
+                            __html: `${product.description_uz.slice(0, 30)}...`,
+                          }}
+                        />
+                      ) : LangVal() == "en" ? (
+                        <div
+                          dangerouslySetInnerHTML={{
+                            __html: `${product.description_en.slice(0, 30)}...`,
+                          }}
+                        />
+                      ) : (
+                        <div
+                          dangerouslySetInnerHTML={{
+                            __html: `${product.description_ru.slice(0, 40)}...`,
+                          }}
+                        />
+                      )
                     }
                     image={product.image}
                     id={product.id}

@@ -19,7 +19,7 @@ export const Card = (props) => {
       </div>
       <div className={styles.card_content}>
         <h3>{props.title}</h3>
-        <div>{props.text}</div>
+        <div >{props.text}</div>
         <Link to={`/productmore/${props.id}`}>
           <Button onClick={props.handle}>{t("Products.0")}</Button>
         </Link>
